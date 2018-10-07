@@ -3,7 +3,10 @@ import java.util.Arrays;
 public class FactorialNumberBigValues {
 
   public static void main(String[] args) {
-    System.out.println(factorialNumber("2432902008176640000"));
+
+    String factorial = "2432902008176640000";
+
+    System.out.println(factorialNumber(factorial));
   }
 
   public static int factorialNumber(String factorial) {
