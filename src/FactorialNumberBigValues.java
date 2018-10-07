@@ -1,26 +1,23 @@
-
-
 import java.util.Arrays;
-
 
 public class FactorialNumberBigValues {
 
   public static void main(String[] args) {
-    System.out.println(factorialNumber("5000"));
+    System.out.println(factorialNumber("2432902008176640000"));
   }
 
   public static int factorialNumber(String factorial) {
-    char[]chars = factorial.toCharArray();
+    char[] chars = factorial.toCharArray();
     int[] arrayFactorial = new int[chars.length];
-    for (int i = 0; i < chars.length; i++){
-      arrayFactorial[i] = Integer.parseInt(chars[i]+"");
+    for (int i = 0; i < chars.length; i++) {
+      arrayFactorial[i] = Integer.parseInt(chars[i] + "");
     }
     int numberFact = 0;
     while (true) {
       int[] factorValue = factorial(numberFact);
-      if (factorValue.length>arrayFactorial.length){
-        System.out.println("This number is not factorial for any number");
-        numberFact--;
+      if (factorValue.length > arrayFactorial.length) {
+        System.out.println("This value is not factorial for any number");
+        numberFact = 0;
         break;
       }
       if (Arrays.equals(factorValue, arrayFactorial)) {
@@ -62,23 +59,4 @@ public class FactorialNumberBigValues {
     }
     return res_size;
   }
-
-
-//  public static int factorialNumber(int factorial) {
-//    if (factorial <= 1) {
-//      return 1;
-//    }
-//    int n = 1;
-//    while (factorial > 1) {
-//      if (factorial % n == 0) {
-//        factorial = factorial / n;
-//        n++;
-//      } else {
-//        throw new ArithmeticException("This number is not factorial for any number");
-//      }
-//    }
-//    return n - 1;
-//  }
-
-
 }
